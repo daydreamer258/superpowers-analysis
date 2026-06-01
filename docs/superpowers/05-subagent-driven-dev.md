@@ -152,3 +152,19 @@ Controller:
 | agent 数量 | 每次 1 个 (顺序) | 多个同时 (并行) |
 | 审核 | 两个 formal gate | 人工 review 结果 |
 | 适用 | 实现了 plan 的有序任务 | 3+ 独立测试文件出错 |
+
+---
+
+## 与 OpenSpec 代码实现阶段的对比
+
+| 维度 | Superpowers Subagent-Driven | OpenSpec Apply |
+|------|---------------------------|---------------|
+| 执行者 | 每个 task 一个 fresh subagent | 当前 agent |
+| 上下文隔离 | 是（不继承父 session） | 否（共享 session） |
+| TDD | 强制 Red-Green-Refactor | 无内置规则 |
+| 独立 review | 是（两阶段 review gate） | 否 |
+| 用户参与 | 只在 BLOCKED 时 | task 级参与 |
+| 失败处理 | BLOCKED → 更强模型/更小 task/human | 暂停 → 等用户 |
+| 模型分级 | 按 task 复杂度分级 | 固定 |
+| 成本 | 高（每个 task: 1 implementer + 2 reviewers） | 低 |
+| 持续性 | 无人值守跑完所有 task | 用户可随时中断切换 |

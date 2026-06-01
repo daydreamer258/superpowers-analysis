@@ -76,3 +76,17 @@ Superpowers 明确禁止这种想法。**任何项目都要走完整流程。** 
 brainstorming 结束后 → 唯一合法下一步是 writing-plans
 禁止直接跳到 frontend-design、mcp-builder 或任何其他实现 skill
 ```
+
+---
+
+## 与 OpenSpec 需求澄清阶段的对比
+
+| 维度 | Superpowers Brainstorming | OpenSpec Propose |
+|------|--------------------------|-----------------|
+| 是否强制 | ✅ 硬 Gate，所有项目必须过 | ❌ 可选（可跳过 explore 直接 propose） |
+| 交互模式 | 逐个问题、一次一个 | 批量问答或全自动（/ff） |
+| 产出 | 单一 design doc | proposal + design + delta specs + tasks |
+| 方案探索 | 内置 2-3 方案对比 | explore 命令独立 |
+| 视觉辅助 | visual companion | 无 |
+| 用户批准 | 每个章节 + 最终 spec 都要 | 无显式 gate |
+| 后续步骤 | writing-plans | /opsx:apply |

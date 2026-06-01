@@ -132,3 +132,17 @@ Plan 写完后，给用户两个选项：
 > 2. **Inline Execution** — 当前会话顺序执行 + checkpoint
 >
 > Which approach?"
+
+---
+
+## 与 OpenSpec 计划拆解阶段的对比
+
+| 维度 | Superpowers Writing Plans | OpenSpec Tasks |
+|------|--------------------------|---------------|
+| 粒度 | 每步 2-5 分钟（强制） | 无限制（用户定义） |
+| 代码内容 | 完整代码 + 命令 + 预期输出 | 只有 checkbox 描述 |
+| 目标读者 | subagent（执行机器） | 人类开发者 |
+| Placeholder 容忍度 | 零容忍 | 未限定 |
+| 自审要求 | 有（3 维度） | 无 |
+| TDD 嵌入 | 每个 step 都是 Red-Green-Commit | 无内置 TDD |
+| 与设计的关系 | plan 内置设计上下文 | tasks 和 design 是独立文件 |

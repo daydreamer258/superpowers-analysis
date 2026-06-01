@@ -97,3 +97,14 @@ Return: Summary of what you found and what you fixed.
 - 所有修复集成成功
 - agent 变更之间零冲突
 - **时间节省: 3 个问题在 1 个问题的时间内解决**
+
+---
+
+## 与 OpenSpec 并行能力的对比
+
+| 维度 | Superpowers Parallel Agents | OpenSpec |
+|------|---------------------------|----------|
+| 并行方式 | 多个独立问题同时 dispatch subagent | 多个 change 文件夹可并行存在 |
+| 适用场景 | 调试多个独立测试失败 | 多个独立 feature 并行开发 |
+| 冲突检测 | Agent 返回后人工检查 | change 之间通过 delta spec 隔离 |
+| 并行粒度 | 问题级（一个 bug = 一个 agent） | change 级（一个 feature = 一个 change） |

@@ -84,3 +84,16 @@ Done ✅
 - `test-driven-development` — 开发者 subagent 在每个 task 内必须遵守
 - `verification-before-completion` — 任何时候声称"完成"前必须跑验证
 - `requesting-code-review` / `receiving-code-review` — 审核的标准模板和接收行为
+
+---
+
+## 与 OpenSpec 的架构对比
+
+| 维度 | Superpowers | OpenSpec |
+|------|------------|----------|
+| 层数 | 3 层（Hook → 编排 → 纪律） | 2 层（CLI + AI Skill） |
+| 核心载体 | Markdown prompt 文件 | TypeScript CLI + YAML schema |
+| 平台适配 | 1 个 bash hook 检测环境变量 | 25+ 独立 adapter 文件 |
+| 状态管理 | 无（依赖会话上下文） | artifact graph 引擎 |
+| 阶段强制性 | 严格顺序（hard gate） | 自由顺序（fluid, not rigid） |
+| 产出管理 | spec/plan 作为工作文档 | spec 是 source of truth（delta merge） |

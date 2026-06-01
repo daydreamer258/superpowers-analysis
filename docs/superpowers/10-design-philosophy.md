@@ -85,3 +85,18 @@
 > "If you catch yourself about to write 'Thanks': DELETE IT. State the fix instead."
 
 > "Never silently produce work you're unsure about."
+
+---
+
+## 与 OpenSpec 设计哲学的对比
+
+| 维度 | Superpowers | OpenSpec |
+|------|------------|----------|
+| 核心理念 | 纪律执行（先想后做 + 不可跳过） | 流体决策（actions not phases） |
+| 对 agent 的信任 | 不信任（"Do Not Trust the Report"） | 信任（verify 是可选的） |
+| 对用户的定位 | "human partner"（决策审批者） | 全程可控的执行者 |
+| 项目适配 | 任何项目（"不存在太简单"） | brownfield-first（delta 机制） |
+| spec 管理 | 不管（work doc） | 核心（source of truth + archive） |
+| 代码管理 | 核心（worktree + merge/PR） | 不管 |
+| 学习曲线 | 中 | 低 |
+| 核心产出 | 高质量代码 + 完整 review 记录 | 可追溯的决策历史 + 活的 spec |

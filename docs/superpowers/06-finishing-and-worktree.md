@@ -105,3 +105,16 @@ if [ -f go.mod ]; then go mod download; fi
 ## Sandbox 后备
 
 如果 `git worktree add` 因为权限错误失败（sandbox 拒绝），告诉用户 sandbox 阻止了 worktree 创建，然后在当前目录继续工作。
+
+---
+
+## 与 OpenSpec 完成/归档阶段的对比
+
+| 维度 | Superpowers Finishing | OpenSpec Archive |
+|------|----------------------|-----------------|
+| 做什么 | 合并代码 + 清理环境 | 合并 delta spec + 移动文件夹 |
+| spec 管理 | ❌ 不管 spec 生命周期 | ✅ 核心功能（delta merge） |
+| 代码合并 | ✅ 核心（merge/PR/discard） | ❌ 不管代码 |
+| 历史保留 | 通过 git history | 完整保留在 archive/ 目录中 |
+| worktree 管理 | ✅ 完整支持 | ❌ 不支持 |
+| 选项数量 | 4 个明确选项 | 2 步（sync → archive） |
