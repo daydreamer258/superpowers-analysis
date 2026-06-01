@@ -1,8 +1,10 @@
-# Superpowers 源码深度分析
+# Superpowers & OpenSpec 源码深度分析
 
-> 对 [obra/superpowers](https://github.com/obra/superpowers) v5.1.0 的完整运行逻辑分析。
+> 对 [obra/superpowers](https://github.com/obra/superpowers) v5.1.0 和 [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) 的完整源码分析与对比。
 
-## 目录
+## 内容结构
+
+### 📖 Superpowers 深度分析
 
 - [01 - 整体架构概览](docs/01-architecture-overview.md)
 - [02 - 启动与注入机制](docs/02-session-hook.md)
@@ -15,8 +17,14 @@
 - [09 - 并行 Agent 调度](docs/09-parallel-agents.md)
 - [10 - 设计哲学总结](docs/10-design-philosophy.md)
 
-## Superpowers 是什么？
+### 🆚 OpenSpec vs Superpowers 对比分析
 
-Superpowers 是一套**用 prompt engineering 约束 AI agent 行为的纪律系统**。它不是框架库代码，而是一套层层相扣的提示词规则，通过 session hook 注入到 agent 的"潜意识"里，让 agent 在每个阶段自动触发正确的 workflow skill。
+- [对比 01 - 核心流程对比](docs/compare/01-core-workflow-comparison.md)
+- [对比 02 - 项目结构与技术实现差异](docs/compare/02-project-structure-diff.md)
+- [对比 03 - 单点流程能力对比](docs/compare/03-single-point-capability-comparison.md)
 
-核心流程：**Brainstorming → Writing Plans → Subagent-Driven Development → Finishing**
+## 一句话总结
+
+- **Superpowers** = 用 prompt engineering 约束 AI agent 行为的纪律执行系统
+- **OpenSpec** = 用文件系统结构管理 spec 生命周期的决策追溯系统
+- **一句话区别**：OpenSpec 管理"改什么"，Superpowers 管理"怎么改得好"
